@@ -39,7 +39,7 @@ export class ComputersComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   saveClick() {
     const data = new Computer();

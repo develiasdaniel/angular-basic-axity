@@ -28,9 +28,9 @@ export class ListPetsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // edit(id: string){
-  //   this.router.navigate(['pets',id]);
-  // }
+  edit(id: string){
+    this.router.navigate(['pets',id]);
+  }
 
   delete(id: string) {
     const deletePet = confirm('Esta seguro de eliminar la mascota');

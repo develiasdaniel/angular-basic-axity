@@ -11,6 +11,7 @@ import { PetsService } from '../services/pets.service';
 export class PetsComponent implements OnInit {
   formPets: FormGroup;
   id: string;
+  textButton:string = "Registrar"
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,21 +29,22 @@ export class PetsComponent implements OnInit {
       ],
     });
 
-    // this.route.params.subscribe((parameters) => {
-    //   if (parameters.id) {
-    //     console.log('', parameters.id);
-    //     this.id = parameters.id;
+    this.route.params.subscribe((parameters) => {
+      if (parameters.id) {
+        this.id = parameters.id;
+        this.textButton ="Actualizar";
 
-    //     this.computers.getSingleComputer(parameters.id).subscribe((res) => {
-    //       this.formComputer.get('brand').setValue(res.brand);
-    //       this.formComputer.get('memory').setValue(res.memory);
-    //       this.formComputer.get('size').setValue(res.size);
-    //     });
-    //   }
-    // });
+        this.pets.getSinglePet(parameters.id).subscribe((res) => {
+          this.formPets.get('name').setValue(res.name);
+          this.formPets.get('specie').setValue(res.specie);
+          this.formPets.get('hairColor').setValue(res.hairColor);
+          this.formPets.get('weight').setValue(res.weight);
+        });
+      }
+    });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   savePet() {
     const data = new Pet();
@@ -52,18 +54,18 @@ export class PetsComponent implements OnInit {
     data.weight = this.formPets.get('weight').value;
 
     if (this.id) {
-      // this.computers.updateComputers(this.id, data).subscribe(
-      //   () => {
-      //     this.router.navigate(['list']);
-      //   },
-      //   (err) => {
-      //     alert('ocurrrio un error al actualizar elemento');
-      //   }
-      // );
+      this.pets.updatePet(this.id, data).subscribe(
+        () => {
+          this.router.navigate(['petslist']);
+        },
+        (err) => {
+          alert('ocurrrio un error al actualizar la mascota');
+        }
+      );
     } else {
       this.pets.savePet(data).subscribe(
         () => {
-          alert('Mascota guardada exitosaente');
+          alert('Mascota guardada exitosamente');
         },
         (error) => {
           alert('Ocurrió un error al guardar');
