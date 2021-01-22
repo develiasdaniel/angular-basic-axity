@@ -10,12 +10,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import{​​​​​ MatButtonModule }​​​​​from'@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MascotasComponent } from './mascotas/mascotas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MascotasComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

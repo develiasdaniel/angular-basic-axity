@@ -8,6 +8,6 @@
           <mat-label>Password</mat-label>
           <input type="password" matInput placeholder="" formControlName="password" />
         </mat-form-field>
-        <button mat-raised-button color="primary">Ingresar</button>
+        <button mat-raised-button color="primary" [disabled]="formLogin.invalid" (click)="loginClick()">Ingresar</button>
     </div>
 </div>
