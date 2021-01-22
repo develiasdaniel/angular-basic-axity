@@ -16,6 +16,7 @@ import { ComputersComponent } from './computers/computers.component';
 import { PetsComponent } from './pets/pets.component';
 import { ListComponent } from './list/list.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {MatTableModule} from '@angular/material/table';
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

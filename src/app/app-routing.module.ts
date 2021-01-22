@@ -29,6 +29,10 @@ const routes: Routes = [
     component: ComputersComponent,
   },
   {
+    path: 'computers/:id',
+    component: ComputersComponent,
+  },
+  {
     path: 'list',
     component: ListComponent,
   }

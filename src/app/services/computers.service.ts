@@ -9,19 +9,23 @@ export class ComputersService {
 
   constructor(private http: HttpClient) { }
 
+  getSingleComputer(id: string) {
+    return this.http.get<Computer>('https://super-rest.herokuapp.com/test/elias/' + id);
+  }
+
   getComputers(): Observable<[Computer]>{
-    return this.http.get<[Computer]>('https://super-rest.herokuapp.com/test/elias');
+    return this.http.get<[Computer]>('https://super-rest.herokuapp.com/test/elias/');
   }
 
   postComputers(data: Computer){
-    return this.http.post('https://super-rest.herokuapp.com/test/elias',data);
+    return this.http.post('https://super-rest.herokuapp.com/test/elias/',data);
   }
 
   updateComputers(id: string, data: Computer){
-    return this.http.put('https://super-rest.herokuapp.com/test/elias'+id,data);
+    return this.http.put('https://super-rest.herokuapp.com/test/elias/'+id,data);
   }
 
   deleteComputers(id: String){
-    return this.http.delete('https://super-rest.herokuapp.com/test/elias'+id);
+    return this.http.delete('https://super-rest.herokuapp.com/test/elias/'+id);
   }
 }
