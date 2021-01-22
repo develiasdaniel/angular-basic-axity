@@ -11,7 +11,8 @@ import { PetsService } from '../services/pets.service';
 export class PetsComponent implements OnInit {
   formPets: FormGroup;
   id: string;
-  textButton:string = "Registrar"
+  textButton:string = "Registrar";
+  title = "Registra a tu mascota";
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,6 +34,7 @@ export class PetsComponent implements OnInit {
       if (parameters.id) {
         this.id = parameters.id;
         this.textButton ="Actualizar";
+        this.title ="Actualiza a tu mascota";
 
         this.pets.getSinglePet(parameters.id).subscribe((res) => {
           this.formPets.get('name').setValue(res.name);

@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { ListPetsComponent } from './list-pets/list-pets.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
-import { MascotasComponent } from './mascotas/mascotas.component';
 import { PetsComponent } from './pets/pets.component';
 
 const routes: Routes = [
@@ -16,10 +15,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: 'mascotas',
-    component: MascotasComponent
   },
   {
     path: 'pets',
