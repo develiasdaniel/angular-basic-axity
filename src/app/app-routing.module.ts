@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComputersComponent } from './computers/computers.component';
 import { HomeComponent } from './home/home.component';
+import { ListPetsComponent } from './list-pets/list-pets.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
@@ -23,6 +24,14 @@ const routes: Routes = [
   {
     path: 'pets',
     component: PetsComponent,
+  },
+  {
+    path: 'pets/:id',
+    component: PetsComponent,
+  },
+  {
+    path: 'petslist',
+    component: ListPetsComponent,
   },
   {
     path: 'computers',

@@ -17,6 +17,7 @@ import { PetsComponent } from './pets/pets.component';
 import { ListComponent } from './list/list.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import { ListPetsComponent } from './list-pets/list-pets.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
     ComputersComponent,
     PetsComponent,
     ListComponent,
+    ListPetsComponent,
   ],
   imports: [
     BrowserModule,
