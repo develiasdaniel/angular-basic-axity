@@ -1,0 +1,19 @@
+.pets-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title{
+    font-size: 30px;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 30px;
+}

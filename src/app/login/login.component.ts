@@ -35,10 +35,13 @@ export class LoginComponent implements OnInit {
     data.password = password;
     console.log(data);
     
-    this.loginService.login(data).subscribe(value => {
-      if (value.token){
+    this.loginService.login(data).subscribe(res => {
+      if (res.token){
         this.route.navigate(['home'])
       }   
+    }, error => {
+      console.log(error);
+      alert(error.error.error)
     })
   }
 

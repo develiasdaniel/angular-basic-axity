@@ -12,6 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MascotasComponent } from './mascotas/mascotas.component';
+import { ComputersComponent } from './computers/computers.component';
+import { PetsComponent } from './pets/pets.component';
+import { ListComponent } from './list/list.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,9 @@ import { MascotasComponent } from './mascotas/mascotas.component';
     LoginComponent,
     HomeComponent,
     MascotasComponent,
+    ComputersComponent,
+    PetsComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { MascotasComponent } from './mascotas/mascotas.component';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
