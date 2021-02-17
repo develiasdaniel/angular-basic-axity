@@ -15,8 +15,10 @@ import { ComputersComponent } from './computers/computers.component';
 import { PetsComponent } from './pets/pets.component';
 import { ListComponent } from './list/list.component';
 import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { ListPetsComponent } from './list-pets/list-pets.component';
+import { UsersListComponent } from './pages/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ListPetsComponent } from './list-pets/list-pets.component';
     PetsComponent,
     ListComponent,
     ListPetsComponent,
+    UsersListComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { ListPetsComponent } from './list-pets/list-pets.component';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
